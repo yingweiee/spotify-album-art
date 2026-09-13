@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b0f0e"/>
+      <stop offset=".55" stop-color="#8a2a1f"/>
+      <stop offset="1" stop-color="#e0643a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff1c9"/>
+      <stop offset=".6" stop-color="#f3c27a"/>
+      <stop offset="1" stop-color="#f3c27a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f3a4a"/>
+      <stop offset="1" stop-color="#0c1820"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .8  0 0 0 .22 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <clipPath id="c"><rect width="600" height="600"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="600" height="600" fill="url(#sky)"/>
+    <circle cx="300" cy="352" r="150" fill="url(#sun)"/>
+    <circle cx="300" cy="352" r="92" fill="#f7d08c"/>
+    <g fill="#8a2a1f">
+      <rect y="300" width="600" height="7"/>
+      <rect y="322" width="600" height="6"/>
+      <rect y="342" width="600" height="5"/>
+    </g>
+    <rect y="360" width="600" height="240" fill="url(#sea)"/>
+    <g fill="none" stroke="#f3c27a" stroke-linecap="round">
+      <path d="M210 382h180" stroke-width="5" opacity=".9"/>
+      <path d="M232 404h136" stroke-width="4" opacity=".7"/>
+      <path d="M256 426h88" stroke-width="3.5" opacity=".55"/>
+      <path d="M276 448h48" stroke-width="3" opacity=".4"/>
+      <path d="M290 468h20" stroke-width="2.5" opacity=".3"/>
+    </g>
+    <g fill="none" stroke="#e0643a" stroke-width="2" opacity=".35">
+      <path d="M0 520q75-18 150 0t150 0 150 0 150 0"/>
+      <path d="M0 555q75-18 150 0t150 0 150 0 150 0"/>
+    </g>
+    <!-- radio mast -->
+    <g stroke="#140707" stroke-width="3" fill="none">
+      <path d="M470 360 L492 170 L514 360"/>
+      <path d="M478 290h28M484 235h16M474 325h36"/>
+      <path d="M492 170v-22"/>
+    </g>
+    <circle cx="492" cy="146" r="4" fill="#ff5a3c"/>
+    <g fill="none" stroke="#f3c27a" stroke-width="2" opacity=".6">
+      <path d="M506 132a20 20 0 0 1 0 28"/>
+      <path d="M516 122a34 34 0 0 1 0 48"/>
+      <path d="M478 132a20 20 0 0 0 0 28"/>
+      <path d="M468 122a34 34 0 0 0 0 48"/>
+    </g>
+    <text x="40" y="76" font-family="Georgia, serif" font-size="44" font-style="italic" fill="#f7d08c" letter-spacing="1">Low Tide Radio</text>
+    <text x="42" y="106" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#f3c27a" letter-spacing="6" opacity=".85">ODA LUMEN</text>
+    <rect width="600" height="600" filter="url(#grain)" fill="#fff"/>
+  </g>
+</svg>
