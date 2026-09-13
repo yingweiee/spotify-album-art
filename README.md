@@ -3,6 +3,8 @@
 A web recreation of Spotify's Now Playing → full-screen artwork flow, plus three concepts for a new
 feature: **tap the artwork again to reveal the details behind the art.**
 
+**Live demo:** https://yingweiee.github.io/spotify-album-art/ (best on a phone)
+
 No build step. Open `index.html` through any static server:
 
 ```bash
