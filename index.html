@@ -3,20 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Album Art Details — Concepts</title>
+  <title>Album Art Explore</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <aside class="switcher" aria-label="Concept">
-    <p class="switcher-title">Art details concept</p>
-    <div class="pills" role="tablist">
-      <button role="tab" data-concept="flip">1 · Flip</button>
-      <button role="tab" data-concept="explore">2 · Explore</button>
-      <button role="tab" data-concept="sheet">3 · Sheet</button>
-    </div>
-    <p class="switcher-desc" id="conceptDesc"></p>
-  </aside>
-
   <main class="phone" id="phone">
     <!-- ============ NOW PLAYING ============ -->
     <section class="player" id="player">
@@ -71,7 +61,7 @@
     </section>
 
     <!-- ============ ARTWORK VIEWER ============ -->
-    <section class="viewer" id="viewer" aria-hidden="true" data-concept="flip">
+    <section class="viewer" id="viewer" aria-hidden="true">
       <button class="icon-btn close" id="close" aria-label="Close">
         <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
@@ -79,26 +69,18 @@
       <div class="stage" id="stage">
         <div class="mover" id="mover">
           <div class="card" id="card">
-            <div class="face front">
+            <div class="face">
               <img src="art.svg" alt="" draggable="false" />
               <div class="glare" id="glare"></div>
               <div class="hotspots" id="hotspots"></div>
             </div>
-            <div class="face back" id="back"></div>
           </div>
         </div>
       </div>
 
-      <p class="hint" id="hint">Drag to tilt · Tap for art details</p>
+      <p class="hint" id="hint">Drag to tilt · Tap to explore</p>
 
-      <!-- Concept 2: annotation card -->
       <div class="annot" id="annot" aria-live="polite"></div>
-
-      <!-- Concept 3: sheet -->
-      <div class="sheet" id="sheet">
-        <div class="grab" id="grab"><span></span></div>
-        <div class="sheet-body" id="sheetBody"></div>
-      </div>
     </section>
   </main>
 
